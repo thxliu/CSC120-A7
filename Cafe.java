@@ -90,6 +90,16 @@ public class Cafe extends Building {
         super.showOptions();
         System.out.println(" + restock() \n + sellCoffee() \n");
     }
+
+    public void goToFloor(int floorNum){
+        super.goToFloor(activeFloor);
+        if (floorNum == 1){
+            System.out.println("You are now on " + floorNum + ".");
+        }
+        else{
+            System.out.println("Cannot go to " + floorNum + " -- for employees only. Sorry.");
+        }
+    }
     
     public static void main(String[] args) {
         Cafe cafe = new Cafe("Compass Cafe", "Library", 4, 50, 50, 50, 10);

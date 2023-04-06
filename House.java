@@ -145,7 +145,10 @@ public class House extends Building {
     public void goToFloor(int floorNum){
         super.goToFloor(floorNum);
         if (this.hasElevator == true){
-            System.out.println("Cannot go to " + floorNum + ". Please take the elevator.");
+            System.out.println("You are now on " + floorNum + ".");
+        }
+        else{
+            System.out.println("Cannot go to " + floorNum + " without an elevator. Sorry.");
         }
     }
 
